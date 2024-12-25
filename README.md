@@ -167,6 +167,8 @@ is tagged correctly.
   * `ghcr.io/parkervcp/yolks:go_1.21`
 * [`go1.22`](/go/1.22)
   * `ghcr.io/parkervcp/yolks:go_1.22`
+* [`go1.23`](/go/1.23)
+  * `ghcr.io/parkervcp/yolks:go_1.23`
 
 ### [Java](/java)
 
