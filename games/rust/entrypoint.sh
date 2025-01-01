@@ -17,9 +17,9 @@ MODIFIED_STARTUP=`eval echo $(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g'
 echo ":/home/container$ ${MODIFIED_STARTUP}"
 
 if [[ "${FRAMEWORK}" == "carbon" ]]; then
-    # Carbon: https://github.com/CarbonCommunity/Carbon.Core
+    # Carbon: https://github.com/CarbonCommunity/Carbon
     echo "Updating Carbon..."
-    curl -sSL "https://github.com/CarbonCommunity/Carbon.Core/releases/download/production_build/Carbon.Linux.Release.tar.gz" | tar zx
+    curl -sSL "https://github.com/CarbonCommunity/Carbon/releases/download/production_build/Carbon.Linux.Release.tar.gz" | tar zx
     echo "Done updating Carbon!"
 
     export DOORSTOP_ENABLED=1
