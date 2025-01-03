@@ -5,7 +5,7 @@ FROM    --platform=$TARGETOS/$TARGETARCH node:16-bookworm
 
 LABEL   author="goover" maintainer="info@goover.de"
 
-ENV     DEBIAN_FRONTEND noninteractive
+ENV     DEBIAN_FRONTEND=noninteractive
 
 RUN     useradd -m -d /home/container -s /bin/bash container
 
