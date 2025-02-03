@@ -11,37 +11,37 @@ RUN         dpkg --add-architecture i386 \
             && apt-get update \
             && apt-get upgrade -y \
             && apt-get install -y \
-				tar \
 				curl \
-				gcc \
 				g++ \
-				locales \
-				lib32gcc-s1 \
-				libgcc-12-dev \
-				libgcc-11-dev \
-				libcurl4-gnutls-dev:i386 \
-				libssl-dev:i386 \
-				libcurl4:i386 \
-				lib32tinfo6 \
-				libtinfo6:i386 \
-				lib32z1 \
-				lib32stdc++6 \
-				libncurses5:i386 \
-				libcurl3-gnutls:i386 \
-				libsdl2-2.0-0:i386 \
-				libsdl2-2.0-0 \
-				iproute2 \
+				gcc \
 				gdb \
-				libsdl1.2debian \
-				libfontconfig1 \
-				telnet \
+				iproute2 \
+				locales \
 				net-tools \
 				netcat-traditional \
-				tzdata \
 				numactl \
-				xvfb \
+				tar \
+				telnet \
+				tini \
+				tzdata \
 				wget \
-				tini
+				xvfb \
+				lib32gcc-s1 \
+				lib32stdc++6 \
+				lib32tinfo6 \
+				lib32z1 \
+				libcurl3-gnutls:i386 \
+				libcurl4-gnutls-dev:i386 \
+				libcurl4:i386 \
+				libfontconfig1 \
+				libgcc-11-dev \
+				libgcc-12-dev \
+				libncurses5:i386 \
+				libsdl1.2debian \
+				libsdl2-2.0-0 \
+				libsdl2-2.0-0:i386 \
+				libssl-dev:i386 \
+				libtinfo6:i386
 
 ## install rcon
 RUN         cd /tmp/ \
