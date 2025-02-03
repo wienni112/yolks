@@ -15,6 +15,7 @@ RUN         dpkg --add-architecture i386 \
 				curl \
 				gcc \
 				g++ \
+				locales \
 				lib32gcc-s1 \
 				libgcc-12-dev \
 				libgcc-11-dev \
