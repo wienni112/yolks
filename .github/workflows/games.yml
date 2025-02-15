@@ -44,7 +44,7 @@ jobs:
           push: true
           tags: |
             ghcr.io/${{ github.repository_owner }}/games:${{ matrix.game }}
-            ghcr.io/parkervcp/games:${{ matrix.game }}
+            ${{ github.repository_owner == 'pelican-eggs' && 'ghcr.io/parkervcp/games:${{ matrix.game }}' || '' }}
   pushAll:
     name: "games_All:${{ matrix.game }}"
     runs-on: ubuntu-latest
@@ -76,4 +76,4 @@ jobs:
           push: true
           tags: |
             ghcr.io/${{ github.repository_owner }}/games:${{ matrix.game }}
-            ghcr.io/parkervcp/games:${{ matrix.game }}
+            ${{ github.repository_owner == 'pelican-eggs' && 'ghcr.io/parkervcp/games:${{ matrix.game }}' || '' }}

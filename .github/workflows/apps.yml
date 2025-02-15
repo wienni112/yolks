@@ -40,4 +40,4 @@ jobs:
           push: true
           tags: |
             ghcr.io/${{ github.repository_owner }}/apps:${{ matrix.app }}
-            ghcr.io/parkervcp/apps:${{ matrix.app }}
+            ${{ github.repository_owner == 'pelican-eggs' && 'ghcr.io/parkervcp/apps:${{ matrix.app }}' || '' }}
