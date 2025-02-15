@@ -35,5 +35,5 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: |
-            ghcr.io/pelican-eggs/yolks:${{ matrix.tag }}
-            ghcr.io/parkervcp/yolks:${{ matrix.tag }}
+            ghcr.io/${{ github.repository_owner }}/yolks:${{ matrix.tag }}
+            ${{ github.repository_owner == 'pelican-eggs' && 'ghcr.io/parkervcp/yolks:${{ matrix.tag }}' || '' }}
