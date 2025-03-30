@@ -60,7 +60,7 @@ RUN         dpkg --add-architecture i386 \
                 libsdl1.2debian \
                 libsdl2-2.0-0:i386 \
                 libssl-dev:i386 \
-                libtinfo6:i386 \
+                libtinfo6:i386
 
 # Install rcon
 RUN         cd /tmp/ \
