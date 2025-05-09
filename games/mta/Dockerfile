@@ -1,4 +1,4 @@
-FROM  --platform=$TARGETOS/$TARGETARCH ubuntu:20.04
+FROM  --platform=$TARGETOS/$TARGETARCH ubuntu:24.04
 
 ENV   DEBIAN_FRONTEND=noninteractive
 
@@ -6,16 +6,35 @@ ENV   DEBIAN_FRONTEND=noninteractive
 RUN   useradd -m -d /home/container -s /bin/bash container
 
 ## update base packages
-RUN   apt update \
-        &&   apt upgrade -y
+RUN   apt update && \
+      apt upgrade -y
 
 ## install dependencies
-RUN   apt install -y iproute2 tar libssl1.1 curl git default-libmysqlclient-dev libmysqlclient-dev libreadline-gplv2-dev libncurses5-dev libncursesw5-dev \ 
-        libtool zip unzip libncurses5 libncursesw5 python3 openssl locales ffmpeg apt-transport-https libc6 binutils xz-utils liblua5.1-0
+RUN   apt install -y iproute2 \
+        curl \
+        git \
+        zip \
+        unzip \
+        tar \
+        xz-utils \
+        apt-transport-https \
+        openssl \
+        libssl3 \
+        default-libmysqlclient-dev \
+        libmysqlclient-dev \
+        libreadline-dev \
+        libncurses-dev \
+        libtool \
+        python3  \
+        locales \
+        ffmpeg \
+        libc6 \
+        binutils  \
+        liblua5.1-0
 
 ## configure locale
-RUN   update-locale lang=en_US.UTF-8 \
-        &&   dpkg-reconfigure --frontend noninteractive locales
+RUN   update-locale lang=en_US.UTF-8 && \
+      dpkg-reconfigure --frontend noninteractive locales
 
 WORKDIR /home/container
 
