@@ -248,6 +248,8 @@ is tagged correctly.
   * `ghcr.io/parkervcp/yolks:nodejs_22`  
 * [`node23`](/nodejs/23)
   * `ghcr.io/parkervcp/yolks:nodejs_23`
+* [`node24`](/nodejs/24)
+  * `ghcr.io/parkervcp/yolks:nodejs_24`  
   
 ### [PostgreSQL](/postgres)
 
